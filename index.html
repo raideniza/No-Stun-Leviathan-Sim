@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+    <meta charset="UTF-8" />
+    <title>No Stun Leviathan</title>
+</head>
+<body>
+    <div id="instructionsContainer">
+        <ul>
+            <li>This is a practice sim for reacting to the no stun leviathan</li>
+            <li>You have no more than 1 tick to react to each attack appearing.</li>
+            <li>A blue hitsplat indicates a correct prayer, while a red hitsplat indicates a wrong one.</li>
+        </ul>
+    </div>
+
+    <div class="options-container">
+        <label for="angle">Angle:</label>
+        <select id="angle" autocomplete="off">
+            <option value="Up" selected>Up</option>
+            <option value="Down">Down</option>
+        </select>
+
+        <label for="tickCounter">Tick Counter:</label>
+        <select id="tickCounter" autocomplete="off">
+            <option value="On" selected>On</option>
+            <option value="Off">Off</option>
+        </select>
+    </div>
+
+    <div class="slider-container">
+        <div class="slider">
+            <label for="ping">Ping</label>
+            <input autocomplete="off" type="range" id="ping" min="0" max="300" value="50">
+            <div class="values">
+                <span>0</span>
+                <span id="ping-value">50 ms</span>
+                <span>300</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- <button class="reset_button" id="reset_button">Reset Inventory</button> -->
+
+    <div id="canvasesdiv" style="position:relative; width:790px; height:565px">
+        <canvas id="backgroundCanvas"
+            style="z-index: 1; position:absolute; left:0px; top:0px;"
+            height="565px" width="790px">
+        </canvas>
+
+        <!-- for overhead prayers -->
+        <canvas id="overheadAnimationCanvas"
+            style="z-index: 2; pointer-events: none; position:absolute; left:0px; top:0px;"
+            height="565px" width="790px">
+        </canvas>
+
+        <!-- for leviathan attacks -->
+        <canvas id="leviathanAnimationCanvas"
+            style="z-index: 3; pointer-events: none; position:absolute; left:0px; top:0px;"
+            height="565px" width="790px">
+        </canvas>
+
+        <!-- for damage splats -->
+        <canvas id="hitsplatAnimationCanvas"
+            style="z-index: 4; pointer-events: none; position:absolute; left:0px; top:0px;"
+            height="565px" width="790px">
+        </canvas>
+
+        <!-- for click event listener on prayers -->
+        <canvas id="inventoryBackgroundCanvas"
+            style="z-index: 3; position:absolute; left:550px; top:230px;"
+            height="334px" width="239px">
+        </canvas>
+
+        <!-- for protect mage -->
+         <canvas id="magePrayerCanvas"
+            style="z-index: 6; position:absolute; left:615px; top:387px"
+            height="34px" width="34px">
+        </canvas>
+
+        <!-- for protect range -->
+         <canvas id="rangePrayerCanvas"
+            style="z-index: 6; position:absolute; left:652px; top:387px"
+            height="34px" width="34px">
+        </canvas>
+
+        <!-- for protect melee -->
+         <canvas id="meleePrayerCanvas"
+            style="z-index: 6; position:absolute; left:689px; top:387px"
+            height="34px" width="34px">
+        </canvas>
+
+        <!-- for potential chat messages showing statistics -->
+        <canvas id="chatCanvas"
+            style="z-index: 4; pointer-events: none; position:absolute; left:0px; top:400px;"
+            height="142px" width="519px">
+        </canvas>
+
+        <!-- for the tick counter -->
+        <canvas id="tickCounterCanvas"
+            style="z-index: 7; position: absolute; left:710px; top:190px;"
+            height="25px" width="25">
+        </canvas>
+    </div>
+</body>
+</html>

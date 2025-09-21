@@ -1,0 +1,80 @@
+@font-face {
+    font-family: osrsFont;
+    src: url('../assets/runescape.ttf');
+}
+
+@font-face {
+    font-family: osrsChatFont;
+    src: url('../assets/RuneScape-Plain-12.ttf');
+}
+
+body {
+    color:aliceblue;
+    font-family: 'osrsFont', sans-serif;
+    font-size: 18px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgb(29, 28, 28);
+}
+
+.slider-container {
+    display: flex;
+    gap: 40px;
+}
+
+.slider {
+    text-align: center;
+}
+
+.slider label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.slider input[type="range"] {
+    width: 250px;
+    margin-bottom: 1px;
+}
+
+.slider .values {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    color:aliceblue;
+    margin-bottom: 20px;
+}
+
+.options-container {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Add spacing between dropdowns */
+    margin: 10px;
+}
+
+.reset_button {
+    margin: 10px;
+}
+
+.session-info {
+    display: flex;
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus {
+    outline: none !important;
+}
