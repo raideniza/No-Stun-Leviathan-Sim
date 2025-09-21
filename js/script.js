@@ -62,8 +62,8 @@ window.onload = function () {
     let xCoordOverhead = 383;
     let yCoordOverhead = 238;
 
-    let xCoordLeviathanAttack = 420;
-    let yCoordLeviathanAttack = 128;
+    let xCoordLeviathanAttack = 428;
+    let yCoordLeviathanAttack = 146;
 
     var tickCounterEnabled = true;
     var tickCounterIsWhite = true;
@@ -94,8 +94,8 @@ window.onload = function () {
             xCoordOverhead = 383;
             yCoordOverhead = 238;
 
-            xCoordLeviathanAttack = 420;
-            yCoordLeviathanAttack = 128;
+            xCoordLeviathanAttack = 428;
+            yCoordLeviathanAttack = 146;
 
             hitsplatPositions = [
                 { x: 384, y: 278, name: 'bottom' },
@@ -108,8 +108,8 @@ window.onload = function () {
             xCoordOverhead = 382;
             yCoordOverhead = 212;
 
-            xCoordLeviathanAttack = 490;
-            yCoordLeviathanAttack = 149;
+            xCoordLeviathanAttack = 496;
+            yCoordLeviathanAttack = 162;
 
             hitsplatPositions = [
                 { x: 384, y: 263, name: 'bottom' },
@@ -219,15 +219,15 @@ window.onload = function () {
         let randomInt = randomIntFromInterval(1, 3);
         if (randomInt === 1) {
             queuedLeviathanAttack = 'mage';
-            leviathanAnimationContext.drawImage(leviathanMage, xCoordLeviathanAttack, yCoordLeviathanAttack, 65, 65);
+            leviathanAnimationContext.drawImage(leviathanMage, xCoordLeviathanAttack, yCoordLeviathanAttack, 45, 45);
         }
         if (randomInt === 2) {
             queuedLeviathanAttack = 'range';
-            leviathanAnimationContext.drawImage(leviathanRange, xCoordLeviathanAttack, yCoordLeviathanAttack, 65, 65);
+            leviathanAnimationContext.drawImage(leviathanRange, xCoordLeviathanAttack, yCoordLeviathanAttack, 45, 45);
         }
         if (randomInt === 3) {
             queuedLeviathanAttack = 'melee';
-            leviathanAnimationContext.drawImage(leviathanMelee, xCoordLeviathanAttack, yCoordLeviathanAttack, 65, 65);
+            leviathanAnimationContext.drawImage(leviathanMelee, xCoordLeviathanAttack, yCoordLeviathanAttack, 45, 45);
         }
     }
 
