@@ -186,6 +186,10 @@ window.onload = function () {
 
 
     function processAttack() {
+        if (queuedLeviathanAttack === 'none') {
+            return;
+        }
+
         if (queuedLeviathanAttack === activePrayer) {
             currentHitsplats.push({ image: zeroHitsplat, index: currentPositionIndex});
             currentStreak = currentStreak + 1;
